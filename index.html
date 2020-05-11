@@ -8,6 +8,13 @@ table, th, td{
   <!--border: 1px solid black; -->
   align: center;
 }
+button{
+width: 100%;
+height: 40px;
+font-size: 24px;
+}
+
+
 img{
   display: block;
   margin-left: auto;
@@ -20,11 +27,18 @@ img{
 <body style="background-color:rgb(150, 150, 255);">
 <h1 style="border:5px solid Chartreuse; text-align:center; font-family:verdana; background-color:rgb(150, 255, 255);">Superkman23 is making games</h1>
 <!--<h1 style="border-top:8px dotted rgb(150, 255, 255);"></h1> -->
-<h2 style="border:2px solid rgb(10, 255, 10); text-align:center; font-family:verdana; background-color:rgb(200, 255, 200);">Games under active development</h2>
 
+<button  
+style="border:2px solid rgb(10, 255, 10); text-align:center; font-family:verdana; background-color:rgb(200, 255, 200);"
+type="button" 
+onclick="HideShowActiveGames()">
+<b> Games Under Active Development</b>
+</button>
 <br>
-<table style="width: 100%">
-	<tr valign="top" >
+<br>
+<div id="Active" style="display:none">
+<table style="width: 100%;">
+	<tr valign="top">
 		<td>
 			<h3 style="font-family:verdana; text-align:center;">Platformer</h5>
 			<img src ="Images\platformer_tutorial.png" width="370" height="204">
@@ -54,8 +68,15 @@ img{
 		</td>
 	</tr>
 </table>
-<h2 style="border:1px solid red; text-align:center; font-family:verdana; background-color:rgb(255, 150, 150);">Games on pause</h2>
+</div>
 
+<button  
+style="border:2px solid red; text-align:center; font-family:verdana; background-color:rgb(255, 150, 150);"
+type="button" 
+onclick="HideShowPausedGames()">
+<b> Games on pause</b>
+</button>
+<div id="Paused" style="display:none">
 <table style="width: 100%">
 	<tr valign="top">
 		<td>
@@ -70,8 +91,25 @@ img{
 		</td>
 	</tr>
 </table>
-	
-
-
 </body>
 </html>
+
+<script>
+function HideShowActiveGames(){
+	var x = document.getElementById("Active");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function HideShowPausedGames(){
+	var x = document.getElementById("Paused");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+</script>

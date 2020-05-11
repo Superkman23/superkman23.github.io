@@ -14,6 +14,20 @@ height: 40px;
 font-size: 24px;
 }
 
+.accordion {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
 
 img{
   display: block;
@@ -30,86 +44,83 @@ img{
 
 <button  
 style="border:2px solid rgb(10, 255, 10); text-align:center; font-family:verdana; background-color:rgb(200, 255, 200);"
-type="button" 
-onclick="HideShowActiveGames()">
+class="accordion">
 <b> Games Under Active Development</b>
 </button>
-<br>
-<br>
-<div id="Active" style="display:none">
-<table style="width: 100%;">
-	<tr valign="top">
-		<td>
-			<h3 style="font-family:verdana; text-align:center;">Platformer</h5>
-			<img src ="Images\platformer_tutorial.png" width="370" height="204">
-			<p style="font-family:verdana; text-align:center;">
-			A 2D platformer inspired by the critically <br>
-			acclaimed Celeste. This game is  my main <br>
-			project and currently only being worked on by me. <br> <br>
-			I plan to include: <br>
-				A level editor <br>
-				Multiple themed levels
-			</p>
-		</td>
-		<td>
-			<h3 style="font-family:verdana; text-align:center;">Project 404</h5>
-			<img src ="Images\project_404.png" width="370" height="204">
-			<p style="font-family:verdana; text-align:center;">
-			Project 404 was originally worked on as a Pikmin 1 HD remake,<br> 
-			however it has since developed into something more of a fully<br> 
-			fledged Pikmin fan project.<br>
-			<br>
-			It is currently being worked on by members of the Pikmin <br>
-			community including musicians, programmers, and others <br>
-			wanting to help out where they can. <br>
-			<br>
-			More information can be found at the project's <a href="https://github.com/MrAmbrosia/Project-404"> Github page </a>
-			</p>
-		</td>
-	</tr>
-</table>
+<div class="panel">
+	<table style="width: 100%;">
+		<tr valign="top">
+			<td>
+				<h3 style="font-family:verdana; text-align:center;">Platformer</h5>
+				<img src ="Images\platformer_tutorial.png" width="370" height="204">
+				<p style="font-family:verdana; text-align:center;">
+					A 2D platformer inspired by the critically <br>
+					acclaimed Celeste. This game is  my main <br>
+					project and currently only being worked on by me. <br> <br>
+					I plan to include: <br>
+					A level editor <br>
+					Multiple themed levels
+				</p>
+			</td>
+			<td>
+				<h3 style="font-family:verdana; text-align:center;">Project 404</h5>
+				<img src ="Images\project_404.png" width="370" height="204">
+				<p style="font-family:verdana; text-align:center;">
+					Project 404 was originally worked on as a Pikmin 1 HD remake,<br> 
+					however it has since developed into something more of a fully<br> 
+					fledged Pikmin fan project.<br>
+					<br>
+					It is currently being worked on by members of the Pikmin <br>
+					community including musicians, programmers, and others <br>
+					wanting to help out where they can. <br>
+					<br>
+					More information can be found at the project's <a href="https://github.com/MrAmbrosia/Project-404"> Github page </a>
+				</p>
+			</td>
+		</tr>
+	</table>
 </div>
+
+<br>
+<br>
 
 <button  
 style="border:2px solid red; text-align:center; font-family:verdana; background-color:rgb(255, 150, 150);"
-type="button" 
-onclick="HideShowPausedGames()">
+class="accordion">
 <b> Games On Pause</b>
 </button>
-<div id="Paused" style="display:none">
-<table style="width: 100%">
-	<tr valign="top">
-		<td>
-			<h3 style="font-family:verdana; text-align:center;">Kerploop</h5>
-			<img src ="Images\kerploop_lab.png" width="370" height="204">
-			<p style="font-family:verdana; text-align:center;">
-			A first person shooter designed to make it easy to add <br>
-			new weapons and enemies. It is being worked on by me and <br>
-			my good friend <a href="https://github.com/MrAmbrosia">Ambrosia<a>. Development logs are posted <br>
-			on Youtube and can be seen <a href="https://www.youtube.com/playlist?list=PLlfM6VNDSYQryXUhfcjuUYQ_GYZDEzURH">here<a>.
-			</p>
-		</td>
-	</tr>
-</table>
-</body>
-</html>
+<div class="panel">
+	<table style="width: 100%">
+		<tr valign="top">
+			<td>
+				<h3 style="font-family:verdana; text-align:center;">Kerploop</h5>
+				<img src ="Images\kerploop_lab.png" width="370" height="204">
+				<p style="font-family:verdana; text-align:center;">
+					A first person shooter designed to make it easy to add <br>
+					new weapons and enemies. It is being worked on by me and <br>
+					my good friend <a href="https://github.com/MrAmbrosia">Ambrosia<a>. Development logs are posted <br>
+					on Youtube and can be seen <a href="https://www.youtube.com/playlist?list=PLlfM6VNDSYQryXUhfcjuUYQ_GYZDEzURH">here<a>.
+				</p>
+			</td>
+		</tr>
+	</table>
+</div>
 
 <script>
-function HideShowActiveGames(){
-	var x = document.getElementById("Active");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-function HideShowPausedGames(){
-	var x = document.getElementById("Paused");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
+var acc = document.getElementsByClassName("accordion");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 </script>
+</body>
+</html>

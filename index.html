@@ -29,6 +29,19 @@ font-size: 24px;
   transition: max-height 0.5s ease-out;
 }
 
+.accordion:after {
+  content: '\002B';
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
 img{
   display: block;
   margin-left: auto;

@@ -39,34 +39,6 @@ img{
 width: 100%
 }
 
-
-.accordion {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  transition: 0.4s;
-}
-.panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-}
-
-.accordion:after {
-  content: '\002B';
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
 </style>
 </head>
 
@@ -76,84 +48,9 @@ width: 100%
 
 <h2 style="text-align:center; font-family:verdana;">About me:</h2>
 <p style="font-family:verdana; text-align:center; width: 50%; margin: auto;">
-	I'm a guy who moderates Pikifen's server, a 2D pikmin game designed on
-	allowing the users to create their fan content (Join <a href="https://discord.gg/qbhz4u3"> here</a> by the way),
-	and makes games in my free time. I have a small <a href="https://www.youtube.com/channel/UCE9NBEk5aVrezqou4jt7Trg">Youtube channel</a> where
-	I post devlogs of games or whatever random stuff I feel like doing. 
+	I post random stuff on my <a href="https://www.youtube.com/channel/UCE9NBEk5aVrezqou4jt7Trg">Youtube channel</a> of
+	varying levels of funny. Usually pretty bad though.
 </p>
-
-<h1 style="border-top:8px dotted rgb(150, 255, 255);"></h1>
-
-<h2 style="text-align:center; font-family:verdana;">My projects:</h2>
-
-<button  style="border:2px solid green; text-align:center; font-family:verdana; background-color:rgb(200, 255, 200);"class="accordion"><b>Games Under Active Development</b></button>
-<div class="panel">
-	<table>
-		<tr valign="top">
-			<td>
-				<h3 style="font-family:verdana; text-align:center;">Platformer</h5>
-				<a href="https://github.com/Superkman23/Platformer" style="display: block;"><img src ="Images\platformer_tutorial.png" width="370" height="204"></a>
-				<p style="font-family:verdana; text-align:center; width: 60%; margin-left: auto; margin-right: auto;">
-					A 2D platformer inspired by the critically
-					acclaimed Celeste. Made with minor help from Ambrosia,
-					I hope to make this game into an easy to use level
-					creator full of objects to use, complete with a story 
-					containing at least 5 unique levels.
-
-				</p>
-			</td>
-			<td>
-				<h3 style="font-family:verdana; text-align:center;">Project 404</h5>
-				<a href="https://www.youtube.com/watch?v=lc6TCsgMHiw" style="display: block;"><img src ="Images\project_404.png" width="370" height="204" style="border:0"></a>
-				<p style="font-family:verdana; text-align:center; width: 60%; margin-left: auto; margin-right: auto;">
-					Project 404 was originally worked on as a Pikmin 1 HD remake,
-					however it has since developed into something more of a fully
-					fledged Pikmin fan project.
-					<br>
-					<br>
-					It is currently being worked on by members of the Pikmin
-					community including musicians, programmers, and others
-					wanting to help out where they can.
-					<br>
-					<br>
-					More information can be found at the project's <a href="https://github.com/MrAmbrosia/Project-404">Github page</a>
-				</p>
-			</td>
-		</tr>
-	</table>
-</div>
-
-<br>
-<br>
-
-<button  style="border:2px solid red; text-align:center; font-family:verdana; background-color:rgb(255, 150, 150);"class="accordion"><b>Games On Pause</b></button>
-<div class="panel">
-	<table>
-		<tr valign="top">
-			<td>
-				<h3 style="font-family:verdana; text-align:center;">Kerploop</h5>
-				<a href= "https://github.com/Superkman23/Kerploop" style="display: block;"><img src ="Images\kerploop_lab.png" width="370" height="204"></a>
-				<p style="font-family:verdana; text-align:center; width: 60%; margin-left: auto; margin-right: auto;">
-					A first person shooter designed to make it easy to add
-					new weapons and enemies. Me and my good friend Ambrosia
-					used to work on this, but we soon realised we had 
-					no ideas for what the game was to be. Development logs are posted
-					on Youtube can be seen <a href="https://www.youtube.com/playlist?list=PLlfM6VNDSYQryXUhfcjuUYQ_GYZDEzURH">here<a>.
-				</p>
-			</td>
-			<td>
-				<h3 style="font-family:verdana; text-align:center;">2 hour shooter</h5>
-				<a href="https://drive.google.com/file/d/1d8N8i0puIHgeoiRZVlagWIVBH60--OxT/view?usp=sharing" style="display: block;"><img src ="Images\two_hour_game.PNG" width="370" height="204"><a>
-				
-				<p style="font-family:verdana; text-align:center; width: 60%; margin-left: auto; margin-right: auto;">
-					The game I made in two hours. It's not completely finished<br>
-					and I plan to come back to it and polish it up someday<br>
-					You can try the game in its current state <a href="https://drive.google.com/file/d/1d8N8i0puIHgeoiRZVlagWIVBH60--OxT/view?usp=sharing">here<a>.
-				</p>
-			</td>
-		</tr>
-	</table>
-</div>
 
 <h1 style="border-top:8px dotted rgb(150, 255, 255);"></h1>
 
@@ -167,20 +64,3 @@ width: 100%
 
 </body>
 </html>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-</script>

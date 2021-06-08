@@ -9,3 +9,8 @@ function ohfuck(amount)
 	}
 	document.getElementById("ohfuck").style.fontSize = currentSize + "px";
 }
+
+function playMusic(){
+	var audio = new Audio('Music/anthem.mp3');
+	audio.play();
+}

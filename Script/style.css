@@ -1,0 +1,25 @@
+html {
+    overflow-y:scroll;
+}
+body {
+  background-color: #6464cd;
+  font-family: 'DejaVu Sans', 'Arial', sans-serif;
+  font-size: 13pt;
+  line-height: 1.5;
+  margin: 0px;
+}
+h1 {
+	border:5px solid Chartreuse; 
+	text-align:center; 
+	font-family:verdana; 
+	background-color:rgb(150, 255, 255); 
+	cursor: pointer;
+	user-select: none;
+}
+.section-break {
+	border-top:8px dotted rgb(150, 255, 255);
+}
+.centered-video {
+	margin: auto; 
+	display: block;
+}

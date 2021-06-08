@@ -9,4 +9,3 @@ function ohfuck(amount)
 	}
 	document.getElementById("ohfuck").style.fontSize = currentSize + "px";
 }
-ohfuck(10);

@@ -13,4 +13,6 @@ function ohfuck(amount)
 function playMusic(){
 	var audio = new Audio('Music/anthem.mp3');
 	audio.play();
+	document.body.style.backgroundImage = "url('Images/flag.jfif')";
+	document.getElementById("flag");
 }

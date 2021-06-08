@@ -2,7 +2,8 @@ html {
     overflow-y:scroll;
 }
 body {
-  background-color: #6464cd;
+  background-image: url('images/shadow.jpg');
+  background-position
   font-family: 'DejaVu Sans', 'Arial', sans-serif;
   font-size: 13pt;
   line-height: 1.5;
@@ -16,7 +17,6 @@ h1 {
 	cursor: pointer;
 	user-select: none;
 }
-
 .section-break {
 	border-top:8px dotted rgb(150, 255, 255);
 }
@@ -30,3 +30,14 @@ h1 {
 	text-align:center;  
 	margin: auto;
 }
+.column {
+  float: left;
+  width: 50%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+

@@ -16,3 +16,10 @@ function playMusic(){
 	document.body.style.backgroundImage = "url('Images/flag.jfif')";
 	document.getElementById("flag");
 }
+
+function playToadSound(){
+	var clip = Math.floor(Math.random() * 14) + 1;
+	var audio_str = 'Music/toad/Toad' + clip;
+	var audio = new Audio(audio_str + ".wav");
+	audio.play();
+}

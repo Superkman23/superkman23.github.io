@@ -43,11 +43,20 @@ h1 {
   display: table;
   clear: both;
 }
-.fullBg{
+.fullBg {
   height: 100%;
 
   background-position: center;
   background-size: cover;
 }
-
+.toad1 {
+	position: fixed;
+	left: 1%;
+	top: 75%;
+}
+.toad2 {
+	position: fixed;
+	left: 88%;
+	top: 75%;
+}
 
